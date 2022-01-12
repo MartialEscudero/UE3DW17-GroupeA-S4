@@ -17,6 +17,7 @@ router.get('/', function(req, res, next) {
 router.get('/eucountries', function(req, res) {
   var params = {
     TableName : "Countries",
+    ProjectionExpression: "nom",
     KeyConditionExpression: "#rg = :region",
     ExpressionAttributeNames:{
         "#rg": "region"
