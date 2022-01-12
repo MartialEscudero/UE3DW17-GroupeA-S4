@@ -7,12 +7,13 @@
   <body>
     <h1>Tous les noms des pays européens :</h1>
     <ul>
-    <%
-        var list = '';
-        for (i = 0; i < countries.length; i++) {
-          list += '<li>'+ countries[i].nom +'</li>';
-        }
-      %>
-      <%- list %>
+        <%
+          var list = '';
+          for (i = 0; i < countries.length; i++) {
+            list += '<li>'+ countries[i].nom +'</li>';
+          }
+        %>
+        <%- list %>
+    </ul>
   </body>
 </html>
