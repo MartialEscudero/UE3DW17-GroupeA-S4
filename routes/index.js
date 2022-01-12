@@ -33,4 +33,23 @@ router.get('/eucountries', function(req, res) {
   });
 });
 
+router.get('/onecountrie', function(req, res) {
+  var params = {
+    TableName : "Countries",
+    FilterExpression: "#nm = :nom",
+    ExpressionAttributeNames:{
+        "#nm": "nom"
+    },
+    ExpressionAttributeValues: {
+        ":nom": "Spain"
+    }
+  };
+  docClient.scan(params, function(err, data) {
+    console.log(data.Items)
+    res.render('onecountrie', {
+      "countrie" : data.Items
+    });
+  });
+});
+
 module.exports = router;

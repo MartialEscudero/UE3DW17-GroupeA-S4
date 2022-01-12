@@ -25,3 +25,5 @@ npm start
 
 ## Liens vers chaque page
 - [/eucountries](http://localhost:3000/eucountries) ➜ Noms des pays européens
+-
+- [/onecountrie](http://localhost:3000/onecountrie) ➜ Toutes les infos disponibles sur un pays donné

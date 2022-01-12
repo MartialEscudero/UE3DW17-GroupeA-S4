@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Les infos disponibles sur l'Espagne</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Toutes les infos disponibles sur l'Espagne :</h1>
+    <ul>
+      <%
+        var list = '';
+        for (i = 0; i < countrie.length; i++) {
+          list +=
+            '<li><b>'+ 'Nom: '+'</b>'+ countrie[i].nom +'</li><br>'+
+            '<li><b>'+ 'Région: '+'</b>'+ countrie[i].region +'</li><br>'+
+            '<li><b>'+ 'Superficie: '+'</b>'+ countrie[i].superficie + 'm²'+'</li><br>'+
+            '<li><b>'+ 'Langue: '+'</b>'+ countrie[i].langues.spa +'</li>';
+        }
+      %>
+      <%- list %>
+    </ul>
+  </body>
+</html>
