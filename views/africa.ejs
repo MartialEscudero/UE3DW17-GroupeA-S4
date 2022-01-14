@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Les infos disponibles sur l'Espagne</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Noms et superficie des pays africains triés par superficie de la 10ème à la 22ème position :</h1>
+    <ul>
+        <% 
+        var list = '';
+        for (i = 9; i < countries.length; i++) {
+            list +=
+                '<li><b>'+ 'Nom : '+'</b>'+ countries[i].nom +'</li><br><ul>'+
+                '<li><b>'+ 'Région : '+'</b>'+ countries[i].region +'</li><br>'+
+                '<li><b>'+ 'Superficie : '+'</b>'+ countries[i].superficie + 'm²'+'</li></ul><br>'
+        }
+      %>
+      <%- list %>
+    </ul>
+</body>
+
+</html>

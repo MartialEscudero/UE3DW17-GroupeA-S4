@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Les infos disponibles sur l'Espagne</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Toutes les infos disponibles sur l'Espagne :</h1>
+    <ul>
+      <%
+        var list = '';
+          list +=
+            '<li><b>'+ 'Nom: '+'</b>'+ country.nom +'</li><br>'+
+            '<li><b>'+ 'Région: '+'</b>'+ country.region +'</li><br>'+
+            '<li><b>'+ 'Superficie: '+'</b>'+ country.superficie + 'm²'+'</li><br>'+
+            '<li><b>'+ 'Langue: '+'</b>'+ country.langues.spa +'</li>';
+
+      %>
+      <%- list %>
+    </ul>
+  </body>
+</html>
