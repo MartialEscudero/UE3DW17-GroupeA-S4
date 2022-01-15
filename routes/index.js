@@ -78,7 +78,7 @@ router.get("/onecountrie", function (req, res) {
     docClient.scan(params, function (err, data) {
         console.log(data.Items);
         res.render("onecountrie", {
-            countrie: data.Items,
+            countrie: data.Items[0],
         });
     });
 });
