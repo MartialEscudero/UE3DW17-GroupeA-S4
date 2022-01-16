@@ -7,7 +7,7 @@
 
 ## Installation & Lancement de l'app
 
-Télécharger le fichier JSON [countries.js](https://raw.githubusercontent.com/mledoze/countries/master/countries.json), extraire le fichier puis l'ajouter au répertoire.
+Télécharger le fichier JSON [countries.json](https://raw.githubusercontent.com/mledoze/countries/master/countries.json), extraire le fichier puis l'ajouter au répertoire.
 
 ```bash
 # installation
