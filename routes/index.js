@@ -104,4 +104,46 @@ router.get("/dutch", function (req, res) {
     });
 });
 
+/* GET names of countries that start with a "P" letter */
+router.get("/startwithp", function (req, res) {
+    var params = {
+        TableName: "Countries",
+        FilterExpression: "#nm between :start_letter and :end_letter",
+        ExpressionAttributeNames: {
+            "#nm": "nom",
+        },
+        ExpressionAttributeValues: {
+            ":start_letter":"P",
+            ":end_letter":"Q",
+        },
+    };
+    docClient.scan(params, function (err, data) {
+        console.log(data.Items);
+        res.render("startwithp", {
+            countries: data.Items,
+        });
+    });
+});
+
+/* GET names and area of countries with an area between 400,000 and 500,000 km2 */
+router.get("/areacountries", function (req, res) {
+    var params = {
+        TableName: "Countries",
+        FilterExpression: "#sp between :start_number and :end_number",
+        ExpressionAttributeNames: {
+            "#sp": "superficie",
+        },
+        ExpressionAttributeValues: {
+            ":start_number":400000,
+            ":end_number":500000,
+        },
+    };
+    docClient.scan(params, function (err, data) {
+        console.log(data.Items);
+        res.render("areacountries", {
+            countries: data.Items,
+        });
+    });
+});
+
 module.exports = router;

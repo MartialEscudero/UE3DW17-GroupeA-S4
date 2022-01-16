@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Noms et superficie des pays ayant une superficie entre 400000 et 500000 km2</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Noms et superficie des pays ayant une superficie entre 400000 et 500000 km2 :</h1>
+    <ul>
+      <%
+        var list = '';
+        for(i = 0; i < countries.length; i++) {
+            list += '<li>' + 'Nom pays : ' + countries[i].nom + ' → Superficie : ' + countries[i].superficie + '</li>'
+        }
+      %>
+      <%- list %>
+    </ul>
+  </body>
+</html>
